@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Análise Completa - Proposta de Gestão E-commerce</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: #2c3e50;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            overflow: hidden;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 40px;
+            text-align: center;
+        }
+        
+        .header h1 {
+            font-size: 32px;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+        
+        .header p {
+            font-size: 16px;
+            opacity: 0.95;
+        }
+        
+        .content {
+            padding: 40px;
+        }
+        
+        .greeting {
+            font-size: 18px;
+            margin-bottom: 30px;
+            color: #34495e;
+        }
+        
+        .section {
+            margin-bottom: 40px;
+        }
+        
+        .section-title {
+            font-size: 24px;
+            color: #667eea;
+            margin-bottom: 20px;
+            font-weight: 600;
+            border-left: 4px solid #667eea;
+            padding-left: 15px;
+        }
+        
+        .calculation-box {
+            background: #f8f9fa;
+            border-left: 4px solid #667eea;
+            padding: 25px;
+            margin: 20px 0;
+            border-radius: 8px;
+        }
+        
+        .calculation-item {
+            display: flex;
+            justify-content: space-between;
+            padding: 12px 0;
+            border-bottom: 1px solid #e0e0e0;
+        }
+        
+        .calculation-item:last-child {
+            border-bottom: none;
+            font-weight: 700;
+            font-size: 18px;
+            color: #667eea;
+            padding-top: 20px;
+            margin-top: 10px;
+            border-top: 2px solid #667eea;
+        }
+        
+        .calculation-label {
+            color: #34495e;
+        }
+        
+        .calculation-value {
+            font-weight: 600;
+            color: #2c3e50;
+        }
+        
+        .highlight-box {
+            background: linear-gradient(135deg, #667eea15 0%, #764ba215 100%);
+            border: 2px solid #667eea;
+            padding: 25px;
+            border-radius: 8px;
+            margin: 25px 0;
+        }
+        
+        .highlight-box strong {
+            color: #667eea;
+            font-size: 18px;
+        }
+        
+        .comparison-table {
+            width: 100%;
+            margin: 25px 0;
+            border-collapse: collapse;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        
+        .comparison-table th {
+            background: #667eea;
+            color: white;
+            padding: 15px;
+            text-align: left;
+            font-weight: 600;
+        }
+        
+        .comparison-table td {
+            padding: 15px;
+            border-bottom: 1px solid #e0e0e0;
+        }
+        
+        .comparison-table tr:last-child td {
+            border-bottom: none;
+        }
+        
+        .comparison-table tr:nth-child(even) {
+            background: #f8f9fa;
+        }
+        
+        .benefit-list {
+            list-style: none;
+            margin: 20px 0;
+        }
+        
+        .benefit-list li {
+            padding: 15px;
+            margin: 10px 0;
+            background: white;
+            border-left: 4px solid #10b981;
+            border-radius: 4px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+        
+        .benefit-list li:before {
+            content: "✓";
+            color: #10b981;
+            font-weight: bold;
+            font-size: 20px;
+            margin-right: 10px;
+        }
+        
+        .warning-box {
+            background: #fff3cd;
+            border-left: 4px solid #ffc107;
+            padding: 20px;
+            margin: 25px 0;
+            border-radius: 4px;
+        }
+        
+        .warning-box strong {
+            color: #856404;
+        }
+        
+        .cta-section {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 40px;
+            text-align: center;
+            border-radius: 8px;
+            margin: 40px 0;
+        }
+        
+        .cta-section h2 {
+            font-size: 28px;
+            margin-bottom: 15px;
+        }
+        
+        .cta-section p {
+            font-size: 18px;
+            margin-bottom: 25px;
+            opacity: 0.95;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background: white;
+            color: #667eea;
+            padding: 15px 40px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 18px;
+            transition: transform 0.3s ease;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+        
+        .cta-button:hover {
+            transform: translateY(-2px);
+        }
+        
+        .timeline {
+            position: relative;
+            padding: 20px 0;
+            margin: 30px 0;
+        }
+        
+        .timeline-item {
+            padding: 20px;
+            background: white;
+            border-left: 3px solid #667eea;
+            margin-left: 20px;
+            margin-bottom: 20px;
+            border-radius: 4px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        
+        .timeline-item h3 {
+            color: #667eea;
+            margin-bottom: 10px;
+        }
+        
+        .footer {
+            background: #2c3e50;
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+        
+        .ps-box {
+            background: #e8f4f8;
+            border-left: 4px solid #3498db;
+            padding: 20px;
+            margin-top: 30px;
+            border-radius: 4px;
+        }
+        
+        .ps-box strong {
+            color: #3498db;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                margin: 10px;
+            }
+            
+            .content {
+                padding: 20px;
+            }
+            
+            .header h1 {
+                font-size: 24px;
+            }
+            
+            .section-title {
+                font-size: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Análise Completa do Investimento</h1>
+            <p>Uma visão realista sobre construir seu negócio digital</p>
+        </div>
+        
+        <div class="content">
+            <div class="greeting">
+                <p>Olá Pablo,</p>
+                <p style="margin-top: 15px;">Obrigado por compartilhar sua preocupação de forma tão detalhada. Entendo perfeitamente sua hesitação, e vou te mostrar exatamente onde está o erro no cálculo que você fez.</p>
+            </div>
+            
+            <div class="section">
+                <h2 class="section-title">A Matemática Correta</h2>
+                <p>Você disse que em 6 meses estaria "no negativo em $10.000", mas vamos revisar os números reais:</p>
+                
+                <div class="calculation-box">
+                    <div class="calculation-item">
+                        <span class="calculation-label">Investimento total (12 meses):</span>
+                        <span class="calculation-value">$24.000</span>
+                    </div>
+                    <div class="calculation-item">
+                        <span class="calculation-label">Retorno do mês 6 ao 11 ($2k × 6):</span>
+                        <span class="calculation-value">$12.000</span>
+                    </div>
+                    <div class="calculation-item">
+                        <span class="calculation-label">Retorno no mês 12:</span>
+                        <span class="calculation-value">$10.000</span>
+                    </div>
+                    <div class="calculation-item">
+                        <span class="calculation-label">Total recuperado até o mês 12:</span>
+                        <span class="calculation-value">$22.000</span>
+                    </div>
+                    <div class="calculation-item">
+                        <span class="calculation-label">Diferença no final de 1 ano:</span>
+                        <span class="calculation-value" style="color: #e74c3c;">-$2.000</span>
+                    </div>
+                </div>
+                
+                <div class="highlight-box">
+                    <p><strong>No mês 13:</strong> Você lucra $10.000 e fecha com <strong>+$8.000 de lucro líquido acumulado</strong>.</p>
+                    <p style="margin-top: 15px;"><strong>A partir do mês 14:</strong> Tudo que entrar ($10.000/mês) é lucro direto no seu bolso.</p>
+                </div>
+                
+                <p style="margin-top: 20px;">Então, ao contrário do que você calculou, você <strong>não</strong> estará negativo. Você estará praticamente empatado em 12 meses e lucrando pesado a partir do 13º.</p>
+            </div>
+            
+            <div class="section">
+                <h2 class="section-title">Sobre a Questão do Tempo</h2>
+                <p>Você mencionou que não tem tempo por causa do trabalho e da faculdade, e que só conseguiria se dedicar quando o negócio já estivesse gerando o suficiente para substituir sua renda atual.</p>
+                
+                <div class="warning-box">
+                    <p><strong>Aqui está a verdade que poucos falam:</strong> essa lógica é exatamente o que mantém pessoas presas no mesmo lugar por anos.</p>
+                </div>
+                
+                <p style="margin-top: 20px;">Eu passei pela mesma situação. Há alguns anos atrás, eu trabalhava tempo integral, não tinha "tempo sobrando" e estava começando minha própria loja de roupas femininas do zero. A diferença é que eu não esperei ter tempo — eu <strong>criei</strong> tempo.</p>
+                
+                <p style="margin-top: 15px;">Acordava mais cedo. Trabalhava nos finais de semana. Sacrifiquei algumas horas de lazer por alguns meses. Foi difícil? Sim. Mas foi <strong>temporário</strong>.</p>
+                
+                <p style="margin-top: 15px;">Hoje, vivo exclusivamente da renda das vendas da minha loja e da gestão que faço para outros clientes. Tenho uma vida confortável e, mais importante, <strong>tenho controle do meu tempo</strong>.</p>
+                
+                <p style="margin-top: 15px;">Isso só aconteceu porque eu tomei a decisão de construir algo <strong>enquanto ainda estava ocupado</strong>, não depois.</p>
+            </div>
+            
+            <div class="section">
+                <h2 class="section-title">O Que Você Realmente Precisa Entender</h2>
+                <p>Você está vendo os $2.000/mês como um "gasto". Mas isso não é um gasto — é a <strong>construção de um ativo</strong>.</p>
+                
+                <p style="margin-top: 20px;">Pensa dessa forma:</p>
+                
+                <table class="comparison-table">
+                    <thead>
+                        <tr>
+                            <th>Cenário</th>
+                            <th>Resultado em 13 meses</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>SEM fazer nada</strong></td>
+                            <td>Você ainda vai estar no mesmo trabalho, com a mesma renda, reclamando da falta de tempo.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>FAZENDO isso</strong></td>
+                            <td>Você terá um negócio consolidado gerando $10.000/mês, que você pode operar de qualquer lugar, e a liberdade de escolher se quer continuar trabalhando ou não.</td>
+                        </tr>
+                    </tbody>
+                </table>
+                
+                <div class="highlight-box" style="margin-top: 25px;">
+                    <p style="font-size: 18px;"><strong>Qual das duas opções faz mais sentido financeiramente?</strong></p>
+                </div>
+            </div>
+            
+            <div class="section">
+                <h2 class="section-title">O Que Você Realmente Ganha</h2>
+                <p>Não é só dinheiro. É:</p>
+                
+                <ul class="benefit-list">
+                    <li><strong>Aprendizado completo:</strong> 2 calls por mês comigo durante 6 meses = 12 sessões onde você vai aprender exatamente como tudo funciona (estrutura de anúncios, otimização de campanhas, análise de métricas, gestão de produtos, funil de vendas).</li>
+                    
+                    <li><strong>Um negócio pronto e lucrativo:</strong> No final de 12 meses, você não vai ter apenas lucro mensal. Você terá um sistema completo funcionando que você pode escalar, vender ou continuar operando.</li>
+                    
+                    <li><strong>Independência:</strong> Quando você dominar o processo (e você vai dominar com as calls), você pode decidir se continua comigo na gestão ou assume 100% e aumenta ainda mais o lucro.</li>
+                    
+                    <li><strong>Ativo digital:</strong> Diferente do seu trabalho atual, onde você troca horas por dinheiro, essa loja trabalha 24/7. Mesmo enquanto você dorme.</li>
+                </ul>
+            </div>
+            
+            <div class="section">
+                <h2 class="section-title">A Realidade do Mercado</h2>
+                <p>Trabalhar com e-commerce de moda feminina hoje é uma das oportunidades mais sólidas que existem. Eu sei porque vivo disso. Mas a janela não fica aberta para sempre.</p>
+                
+                <p style="margin-top: 20px;">Todo mês que passa sem você começar, é um mês que seu concorrente está construindo, testando, aprendendo e lucrando.</p>
+                
+                <p style="margin-top: 20px;">Você pode esperar ter "mais tempo" daqui 1 ano. Mas garanto que daqui 1 ano você vai ter outras responsabilidades, outros compromissos, e vai pensar: <em>"Eu deveria ter começado antes"</em>.</p>
+                
+                <div class="warning-box" style="margin-top: 25px;">
+                    <p><strong>Eu já vi isso acontecer dezenas de vezes.</strong></p>
+                </div>
+            </div>
+            
+            <div class="section">
+                <h2 class="section-title">Minha Proposta Final</h2>
+                <p style="margin-bottom: 20px;">Você investe $2.000/mês durante 12 meses.</p>
+                
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <h3>Eu Entrego</h3>
+                        <ul style="margin-left: 20px; margin-top: 10px;">
+                            <li>Gestão completa da loja Shopify</li>
+                            <li>Criação e otimização de anúncios no Facebook Ads</li>
+                            <li>Acompanhamento diário de métricas e ajustes</li>
+                            <li>2 calls mensais de 1h para te ensinar todo o processo</li>
+                            <li>Suporte direto comigo para qualquer dúvida</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <h3>Resultado Esperado</h3>
+                        <ul style="margin-left: 20px; margin-top: 10px;">
+                            <li><strong>Mês 6:</strong> $2.000 de lucro líquido/mês</li>
+                            <li><strong>Mês 12:</strong> $10.000 de lucro líquido/mês</li>
+                            <li><strong>Mês 13+:</strong> Negócio consolidado gerando receita recorrente</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <h3>No Final, Você Terá</h3>
+                        <ul style="margin-left: 20px; margin-top: 10px;">
+                            <li>Um negócio validado e lucrativo</li>
+                            <li>Conhecimento completo para operar sozinho (se quiser)</li>
+                            <li>Liberdade financeira real</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="cta-section">
+                <h2>A Única Pergunta Que Importa Agora É:</h2>
+                <p>Daqui 13 meses, você quer olhar para trás e pensar <em>"ainda bem que eu comecei"</em> ou <em>"eu deveria ter começado"</em>?</p>
+                <p style="margin-top: 20px;">Porque a oportunidade está na mesa. O conhecimento está disponível. O resultado é previsível (já fiz isso para mim e para outros clientes).</p>
+                <p style="font-size: 20px; margin-top: 25px;"><strong>O que falta é apenas a sua decisão.</strong></p>
+            </div>
+            
+            <div class="section">
+                <p style="font-size: 17px;">Se você está pronto para construir algo real, me avisa e começamos na segunda-feira.</p>
+                
+                <p style="margin-top: 15px; font-size: 17px;">Se ainda tiver dúvidas, podemos agendar uma call rápida de 15 minutos para eu esclarecer qualquer ponto.</p>
+                
+                <p style="margin-top: 15px; font-size: 17px;">Mas se você decidir que agora não é o momento, sem problema. Só peço que seja honesto comigo para eu não ficar esperando retorno.</p>
+                
+                <div class="highlight-box" style="margin-top: 30px;">
+                    <p style="font-size: 18px; text-align: center;"><strong>A escolha é sua.</strong></p>
+                </div>
+                
+                <p style="margin-top: 30px; font-size: 17px;">Abraço,<br><strong>André</strong></p>
+                
+                <div class="ps-box">
+                    <p><strong>P.S.:</strong> Lembra que você mencionou que precisaria ganhar no mínimo o que ganha no trabalho para sair dele? Pensa nisso: em 13 meses, o negócio estaria te pagando mais do que a maioria dos empregos formais. E você seria o dono, não o empregado.</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer">
+            <p>Esta é uma análise personalizada baseada na sua situação específica.</p>
+            <p style="margin-top: 10px; opacity: 0.8;">© 2026 - Gestão Profissional de E-commerce</p>
+        </div>
+    </div>
+</body>
+</html>
