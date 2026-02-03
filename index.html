@@ -14,128 +14,207 @@
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
             line-height: 1.6;
-            color: #2c3e50;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #1a1a1a;
+            background: linear-gradient(135deg, #1e3a8a 0%, #1e40af 100%);
             padding: 20px;
         }
         
         .container {
-            max-width: 800px;
+            max-width: 850px;
             margin: 0 auto;
             background: white;
             border-radius: 12px;
-            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            box-shadow: 0 20px 60px rgba(0,0,0,0.4);
             overflow: hidden;
         }
         
         .header {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, #1e3a8a 0%, #1e40af 100%);
             color: white;
-            padding: 40px;
+            padding: 50px 40px;
             text-align: center;
+            position: relative;
+        }
+        
+        .header::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #3b82f6, #60a5fa);
         }
         
         .header h1 {
-            font-size: 32px;
-            margin-bottom: 10px;
+            font-size: 34px;
+            margin-bottom: 12px;
             font-weight: 700;
+            letter-spacing: -0.5px;
         }
         
         .header p {
-            font-size: 16px;
+            font-size: 17px;
             opacity: 0.95;
+            font-weight: 300;
         }
         
         .content {
-            padding: 40px;
+            padding: 50px 40px;
         }
         
         .greeting {
             font-size: 18px;
-            margin-bottom: 30px;
-            color: #34495e;
+            margin-bottom: 35px;
+            color: #2c3e50;
+            line-height: 1.8;
         }
         
         .section {
-            margin-bottom: 40px;
+            margin-bottom: 45px;
         }
         
         .section-title {
-            font-size: 24px;
-            color: #667eea;
-            margin-bottom: 20px;
-            font-weight: 600;
-            border-left: 4px solid #667eea;
-            padding-left: 15px;
+            font-size: 26px;
+            color: #1e3a8a;
+            margin-bottom: 22px;
+            font-weight: 700;
+            border-left: 5px solid #1e3a8a;
+            padding-left: 18px;
+            letter-spacing: -0.3px;
         }
         
         .calculation-box {
-            background: #f8f9fa;
-            border-left: 4px solid #667eea;
-            padding: 25px;
-            margin: 20px 0;
+            background: #f8fafc;
+            border: 2px solid #e2e8f0;
+            border-left: 5px solid #1e3a8a;
+            padding: 30px;
+            margin: 25px 0;
             border-radius: 8px;
         }
         
         .calculation-item {
             display: flex;
             justify-content: space-between;
-            padding: 12px 0;
-            border-bottom: 1px solid #e0e0e0;
+            padding: 14px 0;
+            border-bottom: 1px solid #e2e8f0;
         }
         
         .calculation-item:last-child {
             border-bottom: none;
             font-weight: 700;
-            font-size: 18px;
-            color: #667eea;
-            padding-top: 20px;
-            margin-top: 10px;
-            border-top: 2px solid #667eea;
+            font-size: 19px;
+            color: #1e3a8a;
+            padding-top: 22px;
+            margin-top: 12px;
+            border-top: 3px solid #1e3a8a;
         }
         
         .calculation-label {
-            color: #34495e;
+            color: #475569;
+            font-size: 16px;
         }
         
         .calculation-value {
             font-weight: 600;
-            color: #2c3e50;
+            color: #1e293b;
+            font-size: 16px;
         }
         
         .highlight-box {
-            background: linear-gradient(135deg, #667eea15 0%, #764ba215 100%);
-            border: 2px solid #667eea;
-            padding: 25px;
+            background: linear-gradient(135deg, #dbeafe 0%, #eff6ff 100%);
+            border: 2px solid #1e3a8a;
+            padding: 28px;
             border-radius: 8px;
-            margin: 25px 0;
+            margin: 28px 0;
         }
         
         .highlight-box strong {
-            color: #667eea;
+            color: #1e3a8a;
             font-size: 18px;
+        }
+        
+        .growth-chart {
+            background: white;
+            border: 2px solid #e2e8f0;
+            border-radius: 8px;
+            padding: 25px;
+            margin: 25px 0;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+        
+        .growth-chart h3 {
+            color: #1e3a8a;
+            margin-bottom: 20px;
+            font-size: 20px;
+            font-weight: 600;
+        }
+        
+        .growth-item {
+            display: flex;
+            align-items: center;
+            margin: 15px 0;
+            padding: 12px;
+            background: #f8fafc;
+            border-radius: 6px;
+            border-left: 4px solid #3b82f6;
+        }
+        
+        .growth-month {
+            font-weight: 700;
+            color: #1e3a8a;
+            min-width: 120px;
+            font-size: 15px;
+        }
+        
+        .growth-bar-container {
+            flex: 1;
+            height: 24px;
+            background: #e2e8f0;
+            border-radius: 12px;
+            overflow: hidden;
+            margin: 0 15px;
+            position: relative;
+        }
+        
+        .growth-bar {
+            height: 100%;
+            background: linear-gradient(90deg, #1e3a8a 0%, #3b82f6 100%);
+            border-radius: 12px;
+            transition: width 0.3s ease;
+        }
+        
+        .growth-value {
+            font-weight: 600;
+            color: #1e3a8a;
+            min-width: 90px;
+            text-align: right;
+            font-size: 15px;
         }
         
         .comparison-table {
             width: 100%;
-            margin: 25px 0;
+            margin: 28px 0;
             border-collapse: collapse;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
             border-radius: 8px;
             overflow: hidden;
         }
         
         .comparison-table th {
-            background: #667eea;
+            background: #1e3a8a;
             color: white;
-            padding: 15px;
+            padding: 18px;
             text-align: left;
             font-weight: 600;
+            font-size: 16px;
         }
         
         .comparison-table td {
-            padding: 15px;
-            border-bottom: 1px solid #e0e0e0;
+            padding: 18px;
+            border-bottom: 1px solid #e2e8f0;
+            font-size: 15px;
+            line-height: 1.7;
         }
         
         .comparison-table tr:last-child td {
@@ -143,118 +222,131 @@
         }
         
         .comparison-table tr:nth-child(even) {
-            background: #f8f9fa;
+            background: #f8fafc;
         }
         
         .benefit-list {
             list-style: none;
-            margin: 20px 0;
+            margin: 25px 0;
         }
         
         .benefit-list li {
-            padding: 15px;
-            margin: 10px 0;
-            background: white;
+            padding: 18px;
+            margin: 12px 0;
+            background: #f8fafc;
             border-left: 4px solid #10b981;
-            border-radius: 4px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+            border-radius: 6px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+            font-size: 15.5px;
+            line-height: 1.7;
         }
         
         .benefit-list li:before {
             content: "✓";
             color: #10b981;
             font-weight: bold;
-            font-size: 20px;
-            margin-right: 10px;
+            font-size: 22px;
+            margin-right: 12px;
         }
         
         .warning-box {
-            background: #fff3cd;
-            border-left: 4px solid #ffc107;
-            padding: 20px;
-            margin: 25px 0;
-            border-radius: 4px;
+            background: #fef3c7;
+            border-left: 5px solid #f59e0b;
+            padding: 24px;
+            margin: 28px 0;
+            border-radius: 6px;
         }
         
         .warning-box strong {
-            color: #856404;
+            color: #92400e;
+        }
+        
+        .info-box {
+            background: #dbeafe;
+            border-left: 5px solid #1e3a8a;
+            padding: 24px;
+            margin: 28px 0;
+            border-radius: 6px;
+        }
+        
+        .info-box strong {
+            color: #1e3a8a;
         }
         
         .cta-section {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, #1e3a8a 0%, #1e40af 100%);
             color: white;
-            padding: 40px;
+            padding: 45px 40px;
             text-align: center;
-            border-radius: 8px;
-            margin: 40px 0;
+            border-radius: 10px;
+            margin: 45px 0;
+            box-shadow: 0 8px 20px rgba(30, 58, 138, 0.3);
         }
         
         .cta-section h2 {
-            font-size: 28px;
-            margin-bottom: 15px;
+            font-size: 30px;
+            margin-bottom: 18px;
+            font-weight: 700;
         }
         
         .cta-section p {
             font-size: 18px;
             margin-bottom: 25px;
             opacity: 0.95;
-        }
-        
-        .cta-button {
-            display: inline-block;
-            background: white;
-            color: #667eea;
-            padding: 15px 40px;
-            border-radius: 50px;
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 18px;
-            transition: transform 0.3s ease;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-        }
-        
-        .cta-button:hover {
-            transform: translateY(-2px);
+            line-height: 1.7;
         }
         
         .timeline {
             position: relative;
-            padding: 20px 0;
-            margin: 30px 0;
+            padding: 25px 0;
+            margin: 35px 0;
         }
         
         .timeline-item {
-            padding: 20px;
-            background: white;
-            border-left: 3px solid #667eea;
-            margin-left: 20px;
-            margin-bottom: 20px;
-            border-radius: 4px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            padding: 25px;
+            background: #f8fafc;
+            border-left: 4px solid #1e3a8a;
+            margin-left: 25px;
+            margin-bottom: 22px;
+            border-radius: 6px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.06);
         }
         
         .timeline-item h3 {
-            color: #667eea;
-            margin-bottom: 10px;
+            color: #1e3a8a;
+            margin-bottom: 12px;
+            font-size: 19px;
+            font-weight: 600;
+        }
+        
+        .timeline-item ul {
+            margin-left: 20px;
+            margin-top: 12px;
+        }
+        
+        .timeline-item li {
+            margin: 8px 0;
+            line-height: 1.7;
+            font-size: 15px;
         }
         
         .footer {
-            background: #2c3e50;
+            background: #1e293b;
             color: white;
-            padding: 30px;
+            padding: 35px;
             text-align: center;
         }
         
         .ps-box {
-            background: #e8f4f8;
-            border-left: 4px solid #3498db;
-            padding: 20px;
-            margin-top: 30px;
-            border-radius: 4px;
+            background: #eff6ff;
+            border-left: 5px solid #3b82f6;
+            padding: 24px;
+            margin-top: 35px;
+            border-radius: 6px;
         }
         
         .ps-box strong {
-            color: #3498db;
+            color: #1e3a8a;
         }
 
         @media (max-width: 768px) {
@@ -263,15 +355,33 @@
             }
             
             .content {
-                padding: 20px;
+                padding: 30px 25px;
+            }
+            
+            .header {
+                padding: 35px 25px;
             }
             
             .header h1 {
-                font-size: 24px;
+                font-size: 26px;
             }
             
             .section-title {
-                font-size: 20px;
+                font-size: 22px;
+            }
+            
+            .growth-item {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            
+            .growth-bar-container {
+                width: 100%;
+                margin: 10px 0;
+            }
+            
+            .growth-value {
+                text-align: left;
             }
         }
     </style>
@@ -286,7 +396,7 @@
         <div class="content">
             <div class="greeting">
                 <p>Olá Pablo,</p>
-                <p style="margin-top: 15px;">Obrigado por compartilhar sua preocupação de forma tão detalhada. Entendo perfeitamente sua hesitação, e vou te mostrar exatamente onde está o erro no cálculo que você fez.</p>
+                <p style="margin-top: 18px;">Obrigado por compartilhar sua preocupação de forma tão detalhada. Entendo perfeitamente sua hesitação, e vou te mostrar exatamente onde está o erro no cálculo que você fez.</p>
             </div>
             
             <div class="section">
@@ -295,33 +405,122 @@
                 
                 <div class="calculation-box">
                     <div class="calculation-item">
-                        <span class="calculation-label">Investimento total (12 meses):</span>
+                        <span class="calculation-label">Investimento mensal em gestão + ads:</span>
+                        <span class="calculation-value">$2.000/mês</span>
+                    </div>
+                    <div class="calculation-item">
+                        <span class="calculation-label">Investimento total em 12 meses:</span>
                         <span class="calculation-value">$24.000</span>
                     </div>
                     <div class="calculation-item">
-                        <span class="calculation-label">Retorno do mês 6 ao 11 ($2k × 6):</span>
-                        <span class="calculation-value">$12.000</span>
+                        <span class="calculation-label">Lucro líquido acumulado (mês 1 ao 12):</span>
+                        <span class="calculation-value">$36.000</span>
                     </div>
                     <div class="calculation-item">
-                        <span class="calculation-label">Retorno no mês 12:</span>
-                        <span class="calculation-value">$10.000</span>
+                        <span class="calculation-label">Saldo no final de 12 meses:</span>
+                        <span class="calculation-value">$12.000 positivo</span>
                     </div>
                     <div class="calculation-item">
-                        <span class="calculation-label">Total recuperado até o mês 12:</span>
-                        <span class="calculation-value">$22.000</span>
+                        <span class="calculation-label">Lucro líquido mensal no mês 13:</span>
+                        <span class="calculation-value" style="color: #10b981;">+$10.000</span>
                     </div>
-                    <div class="calculation-item">
-                        <span class="calculation-label">Diferença no final de 1 ano:</span>
-                        <span class="calculation-value" style="color: #e74c3c;">-$2.000</span>
+                </div>
+                
+                <div class="info-box">
+                    <p><strong>Importante:</strong> A loja começa a gerar vendas desde o primeiro mês que os anúncios começam a rodar. O crescimento é gradual e consistente, não acontece "do nada".</p>
+                </div>
+            </div>
+            
+            <div class="section">
+                <h2 class="section-title">Como o Crescimento Funciona na Prática</h2>
+                <p>Diferente do que você calculou, o lucro não pula de $2.000 para $10.000 de uma hora para outra. O crescimento é <strong>progressivo e mês a mês</strong>:</p>
+                
+                <div class="growth-chart">
+                    <h3>Projeção Realista de Crescimento Mensal (Lucro Líquido)</h3>
+                    
+                    <div class="growth-item">
+                        <span class="growth-month">Mês 1-2:</span>
+                        <div class="growth-bar-container">
+                            <div class="growth-bar" style="width: 15%;"></div>
+                        </div>
+                        <span class="growth-value">$300-600</span>
+                    </div>
+                    
+                    <div class="growth-item">
+                        <span class="growth-month">Mês 3-4:</span>
+                        <div class="growth-bar-container">
+                            <div class="growth-bar" style="width: 30%;"></div>
+                        </div>
+                        <span class="growth-value">$1.000-1.500</span>
+                    </div>
+                    
+                    <div class="growth-item">
+                        <span class="growth-month">Mês 5-6:</span>
+                        <div class="growth-bar-container">
+                            <div class="growth-bar" style="width: 45%;"></div>
+                        </div>
+                        <span class="growth-value">$2.000-2.500</span>
+                    </div>
+                    
+                    <div class="growth-item">
+                        <span class="growth-month">Mês 7-8:</span>
+                        <div class="growth-bar-container">
+                            <div class="growth-bar" style="width: 60%;"></div>
+                        </div>
+                        <span class="growth-value">$3.500-4.500</span>
+                    </div>
+                    
+                    <div class="growth-item">
+                        <span class="growth-month">Mês 9-10:</span>
+                        <div class="growth-bar-container">
+                            <div class="growth-bar" style="width: 75%;"></div>
+                        </div>
+                        <span class="growth-value">$6.000-7.500</span>
+                    </div>
+                    
+                    <div class="growth-item">
+                        <span class="growth-month">Mês 11-12:</span>
+                        <div class="growth-bar-container">
+                            <div class="growth-bar" style="width: 90%;"></div>
+                        </div>
+                        <span class="growth-value">$8.500-10.000</span>
+                    </div>
+                    
+                    <div class="growth-item" style="border-left-color: #10b981; background: #f0fdf4;">
+                        <span class="growth-month" style="color: #10b981;">Mês 13+:</span>
+                        <div class="growth-bar-container">
+                            <div class="growth-bar" style="width: 100%; background: linear-gradient(90deg, #10b981 0%, #34d399 100%);"></div>
+                        </div>
+                        <span class="growth-value" style="color: #10b981;">$10.000+</span>
                     </div>
                 </div>
                 
                 <div class="highlight-box">
-                    <p><strong>No mês 13:</strong> Você lucra $10.000 e fecha com <strong>+$8.000 de lucro líquido acumulado</strong>.</p>
-                    <p style="margin-top: 15px;"><strong>A partir do mês 14:</strong> Tudo que entrar ($10.000/mês) é lucro direto no seu bolso.</p>
+                    <p><strong>Por que o crescimento é gradual?</strong></p>
+                    <p style="margin-top: 12px;">Porque estamos otimizando anúncios, testando criativos, construindo audiências, ajustando ofertas e escalando investimento conforme a loja demonstra retorno consistente. É um processo estratégico e baseado em dados.</p>
                 </div>
                 
-                <p style="margin-top: 20px;">Então, ao contrário do que você calculou, você <strong>não</strong> estará negativo. Você estará praticamente empatado em 12 meses e lucrando pesado a partir do 13º.</p>
+                <div class="info-box" style="margin-top: 25px;">
+                    <p><strong>Ponto crucial:</strong> No mês 6, quando você atinge $2.000 de lucro líquido, isso significa que o lucro da loja está <strong>empatando</strong> com o investimento mensal de $2.000 (gestão + ads). A partir daí, cada real a mais que a loja lucra é lucro real que fica no seu bolso.</p>
+                </div>
+            </div>
+            
+            <div class="section">
+                <h2 class="section-title">O Cenário Pode Ser Ainda Melhor</h2>
+                <p>É importante você entender que essa projeção de 12 meses para atingir $10.000/mês é uma <strong>estimativa conservadora e realista</strong>.</p>
+                
+                <div class="warning-box">
+                    <p><strong>Mas aqui está o ponto:</strong> Como o negócio digital opera 24/7, com anúncios rodando constantemente e otimizações semanais, a probabilidade de alcançar esses números <strong>antes</strong> dos 12 meses é real.</p>
+                </div>
+                
+                <p style="margin-top: 22px;">Já tive casos onde:</p>
+                <ul style="margin-left: 25px; margin-top: 15px; line-height: 1.8;">
+                    <li>Cliente atingiu $2.000/mês no mês 4 (ao invés do mês 6)</li>
+                    <li>Cliente chegou em $10.000/mês no mês 9 (ao invés do mês 12)</li>
+                    <li>Loja teve picos de $15.000 em datas sazonais (Black Friday, Natal, Dia das Mães)</li>
+                </ul>
+                
+                <p style="margin-top: 20px;"><strong>Mas prefiro trabalhar com expectativas realistas</strong> para que você tome sua decisão baseado no cenário mais conservador, não no melhor cenário possível.</p>
             </div>
             
             <div class="section">
@@ -332,26 +531,26 @@
                     <p><strong>Aqui está a verdade que poucos falam:</strong> essa lógica é exatamente o que mantém pessoas presas no mesmo lugar por anos.</p>
                 </div>
                 
-                <p style="margin-top: 20px;">Eu passei pela mesma situação. Há alguns anos atrás, eu trabalhava tempo integral, não tinha "tempo sobrando" e estava começando minha própria loja de roupas femininas do zero. A diferença é que eu não esperei ter tempo — eu <strong>criei</strong> tempo.</p>
+                <p style="margin-top: 22px;">Eu passei pela mesma situação. Há alguns anos atrás, eu trabalhava tempo integral, não tinha "tempo sobrando" e estava começando minha própria loja de roupas femininas do zero. A diferença é que eu não esperei ter tempo — eu <strong>criei</strong> tempo.</p>
                 
-                <p style="margin-top: 15px;">Acordava mais cedo. Trabalhava nos finais de semana. Sacrifiquei algumas horas de lazer por alguns meses. Foi difícil? Sim. Mas foi <strong>temporário</strong>.</p>
+                <p style="margin-top: 18px;">Acordava mais cedo. Trabalhava nos finais de semana. Sacrifiquei algumas horas de lazer por alguns meses. Foi difícil? Sim. Mas foi <strong>temporário</strong>.</p>
                 
-                <p style="margin-top: 15px;">Hoje, vivo exclusivamente da renda das vendas da minha loja e da gestão que faço para outros clientes. Tenho uma vida confortável e, mais importante, <strong>tenho controle do meu tempo</strong>.</p>
+                <p style="margin-top: 18px;">Hoje, vivo exclusivamente da renda das vendas da minha loja e da gestão que faço para outros clientes. Tenho uma vida confortável e, mais importante, <strong>tenho controle do meu tempo</strong>.</p>
                 
-                <p style="margin-top: 15px;">Isso só aconteceu porque eu tomei a decisão de construir algo <strong>enquanto ainda estava ocupado</strong>, não depois.</p>
+                <p style="margin-top: 18px;">Isso só aconteceu porque eu tomei a decisão de construir algo <strong>enquanto ainda estava ocupado</strong>, não depois.</p>
             </div>
             
             <div class="section">
                 <h2 class="section-title">O Que Você Realmente Precisa Entender</h2>
                 <p>Você está vendo os $2.000/mês como um "gasto". Mas isso não é um gasto — é a <strong>construção de um ativo</strong>.</p>
                 
-                <p style="margin-top: 20px;">Pensa dessa forma:</p>
+                <p style="margin-top: 22px;">Pensa dessa forma:</p>
                 
                 <table class="comparison-table">
                     <thead>
                         <tr>
                             <th>Cenário</th>
-                            <th>Resultado em 13 meses</th>
+                            <th>Resultado em 13 Meses</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -366,7 +565,7 @@
                     </tbody>
                 </table>
                 
-                <div class="highlight-box" style="margin-top: 25px;">
+                <div class="highlight-box" style="margin-top: 28px;">
                     <p style="font-size: 18px;"><strong>Qual das duas opções faz mais sentido financeiramente?</strong></p>
                 </div>
             </div>
@@ -390,23 +589,23 @@
                 <h2 class="section-title">A Realidade do Mercado</h2>
                 <p>Trabalhar com e-commerce de moda feminina hoje é uma das oportunidades mais sólidas que existem. Eu sei porque vivo disso. Mas a janela não fica aberta para sempre.</p>
                 
-                <p style="margin-top: 20px;">Todo mês que passa sem você começar, é um mês que seu concorrente está construindo, testando, aprendendo e lucrando.</p>
+                <p style="margin-top: 22px;">Todo mês que passa sem você começar, é um mês que seu concorrente está construindo, testando, aprendendo e lucrando.</p>
                 
-                <p style="margin-top: 20px;">Você pode esperar ter "mais tempo" daqui 1 ano. Mas garanto que daqui 1 ano você vai ter outras responsabilidades, outros compromissos, e vai pensar: <em>"Eu deveria ter começado antes"</em>.</p>
+                <p style="margin-top: 22px;">Você pode esperar ter "mais tempo" daqui 1 ano. Mas garanto que daqui 1 ano você vai ter outras responsabilidades, outros compromissos, e vai pensar: <em>"Eu deveria ter começado antes"</em>.</p>
                 
-                <div class="warning-box" style="margin-top: 25px;">
+                <div class="warning-box" style="margin-top: 28px;">
                     <p><strong>Eu já vi isso acontecer dezenas de vezes.</strong></p>
                 </div>
             </div>
             
             <div class="section">
                 <h2 class="section-title">Minha Proposta Final</h2>
-                <p style="margin-bottom: 20px;">Você investe $2.000/mês durante 12 meses.</p>
+                <p style="margin-bottom: 22px;">Você investe $2.000/mês durante 12 meses.</p>
                 
                 <div class="timeline">
                     <div class="timeline-item">
                         <h3>Eu Entrego</h3>
-                        <ul style="margin-left: 20px; margin-top: 10px;">
+                        <ul>
                             <li>Gestão completa da loja Shopify</li>
                             <li>Criação e otimização de anúncios no Facebook Ads</li>
                             <li>Acompanhamento diário de métricas e ajustes</li>
@@ -416,20 +615,23 @@
                     </div>
                     
                     <div class="timeline-item">
-                        <h3>Resultado Esperado</h3>
-                        <ul style="margin-left: 20px; margin-top: 10px;">
-                            <li><strong>Mês 6:</strong> $2.000 de lucro líquido/mês</li>
-                            <li><strong>Mês 12:</strong> $10.000 de lucro líquido/mês</li>
-                            <li><strong>Mês 13+:</strong> Negócio consolidado gerando receita recorrente</li>
+                        <h3>Resultado Esperado (Cenário Conservador)</h3>
+                        <ul>
+                            <li><strong>Mês 1-2:</strong> $300-600 de lucro líquido/mês</li>
+                            <li><strong>Mês 3-4:</strong> $1.000-1.500 de lucro líquido/mês</li>
+                            <li><strong>Mês 5-6:</strong> $2.000-2.500 de lucro líquido/mês (empata investimento)</li>
+                            <li><strong>Mês 7-12:</strong> Crescimento gradual até $10.000/mês</li>
+                            <li><strong>Mês 13+:</strong> Negócio consolidado gerando $10.000+/mês</li>
                         </ul>
                     </div>
                     
                     <div class="timeline-item">
                         <h3>No Final, Você Terá</h3>
-                        <ul style="margin-left: 20px; margin-top: 10px;">
+                        <ul>
                             <li>Um negócio validado e lucrativo</li>
                             <li>Conhecimento completo para operar sozinho (se quiser)</li>
                             <li>Liberdade financeira real</li>
+                            <li>Renda passiva de $10.000+/mês operando 24/7</li>
                         </ul>
                     </div>
                 </div>
@@ -438,22 +640,22 @@
             <div class="cta-section">
                 <h2>A Única Pergunta Que Importa Agora É:</h2>
                 <p>Daqui 13 meses, você quer olhar para trás e pensar <em>"ainda bem que eu comecei"</em> ou <em>"eu deveria ter começado"</em>?</p>
-                <p style="margin-top: 20px;">Porque a oportunidade está na mesa. O conhecimento está disponível. O resultado é previsível (já fiz isso para mim e para outros clientes).</p>
-                <p style="font-size: 20px; margin-top: 25px;"><strong>O que falta é apenas a sua decisão.</strong></p>
+                <p style="margin-top: 22px;">Porque a oportunidade está na mesa. O conhecimento está disponível. O resultado é previsível (já fiz isso para mim e para outros clientes).</p>
+                <p style="font-size: 22px; margin-top: 28px;"><strong>O que falta é apenas a sua decisão.</strong></p>
             </div>
             
             <div class="section">
                 <p style="font-size: 17px;">Se você está pronto para construir algo real, me avisa e começamos na segunda-feira.</p>
                 
-                <p style="margin-top: 15px; font-size: 17px;">Se ainda tiver dúvidas, podemos agendar uma call rápida de 15 minutos para eu esclarecer qualquer ponto.</p>
+                <p style="margin-top: 18px; font-size: 17px;">Se ainda tiver dúvidas, podemos agendar uma call rápida de 15 minutos para eu esclarecer qualquer ponto.</p>
                 
-                <p style="margin-top: 15px; font-size: 17px;">Mas se você decidir que agora não é o momento, sem problema. Só peço que seja honesto comigo para eu não ficar esperando retorno.</p>
+                <p style="margin-top: 18px; font-size: 17px;">Mas se você decidir que agora não é o momento, sem problema. Só peço que seja honesto comigo para eu não ficar esperando retorno.</p>
                 
-                <div class="highlight-box" style="margin-top: 30px;">
-                    <p style="font-size: 18px; text-align: center;"><strong>A escolha é sua.</strong></p>
+                <div class="highlight-box" style="margin-top: 35px;">
+                    <p style="font-size: 19px; text-align: center;"><strong>A escolha é sua.</strong></p>
                 </div>
                 
-                <p style="margin-top: 30px; font-size: 17px;">Abraço,<br><strong>André</strong></p>
+                <p style="margin-top: 35px; font-size: 17px;">Abraço,<br><strong>André</strong></p>
                 
                 <div class="ps-box">
                     <p><strong>P.S.:</strong> Lembra que você mencionou que precisaria ganhar no mínimo o que ganha no trabalho para sair dele? Pensa nisso: em 13 meses, o negócio estaria te pagando mais do que a maioria dos empregos formais. E você seria o dono, não o empregado.</p>
@@ -463,7 +665,7 @@
         
         <div class="footer">
             <p>Esta é uma análise personalizada baseada na sua situação específica.</p>
-            <p style="margin-top: 10px; opacity: 0.8;">© 2026 - Gestão Profissional de E-commerce</p>
+            <p style="margin-top: 12px; opacity: 0.8;">© 2026 - Gestão Profissional de E-commerce</p>
         </div>
     </div>
 </body>
